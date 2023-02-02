@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3532,7 +3532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &340227618
 Transform:
   m_ObjectHideFlags: 0
@@ -33811,7 +33811,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &4719565847956859264
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -37468,6 +37468,7 @@ MonoBehaviour:
   marsMenu: {fileID: 4719565847950039521}
   game: {fileID: 4719565848653660118}
   alien: {fileID: 4719565847527046048}
+  roverIsMoving: {fileID: 4719565848715247340}
 --- !u!224 &4719565848423370362
 RectTransform:
   m_ObjectHideFlags: 0

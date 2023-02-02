@@ -21,6 +21,7 @@ public class Timer : MonoBehaviour
     public GameObject marsMenu;
     public GameObject game;
     public GameObject alien;
+    public MovementRover roverIsMoving;
 
 
     //I want to enable and disenable the "GO!" text at the beginning of the game, after 1 second
@@ -31,6 +32,7 @@ public class Timer : MonoBehaviour
             //yield on a new YieldInstruction that waits for 1 seconds.
             yield return new WaitForSeconds(1);
 
+            roverIsMoving.enabled = true;
             goText.enabled = false;
         
         
@@ -131,6 +133,7 @@ public class Timer : MonoBehaviour
     {
         if(timeStart > 1)
         {
+            roverIsMoving.enabled = false;
             timeStart -= Time.deltaTime;
             if(timeStart < 1)
             {
