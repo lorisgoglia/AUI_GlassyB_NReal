@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3532,7 +3532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &340227618
 Transform:
   m_ObjectHideFlags: 0
@@ -3552,6 +3552,339 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &343476251
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1926374030}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 477555843}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1845779999}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 258233354}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
+      value: 
+      objectReference: {fileID: 1026890461}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TutorialToUranus
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: HealthOnRestart
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: isRestart
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_MethodName
+      value: WaitStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MinigameLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UranusLife, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UranusGameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UranusTimer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
+      value: BeamGestures, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 920485318053942175, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 979949604581125333, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 2100000, guid: cf3ea772efd90164eb766f02911d1009, type: 2}
+    - target: {fileID: 979949604759107559, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 979949604759107559, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 979949604759107559, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 979949604759107559, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 979949604759107559, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 979949604759107559, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    - target: {fileID: 979949604759107559, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_FontData.m_RichText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 979949605907008298, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: dialogueManager
+      value: 
+      objectReference: {fileID: 343476252}
+    - target: {fileID: 979949605907008298, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 979949605907008298, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "Welcome to Mars's minigame. \nHere, you'll have the chance to pilot
+        a rover and explore the martian surface. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 979949605907008298, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: "Your goal will be to search for aliens during the exploration. \nIn
+        order to move the rover \u2026. (scrivi nel dettaglio i gesti che bisogna
+        fare :) )"
+      objectReference: {fileID: 0}
+    - target: {fileID: 979949605907008298, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: "When you find one or more aliens , You must take a photo by clicking
+        on the button (in alto a sx ? )\nSimple, right? \nTo earn a higher point
+        total, take as many photos as you can. \n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 979949605907008298, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: "Ready? Let\u2019s go!!! Click the \u201CPLAY\u201D to start the game"
+      objectReference: {fileID: 0}
+    - target: {fileID: 979949605921254695, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 343476253}
+    - target: {fileID: 4161431361576600093, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161431361576600093, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.6992004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161431361576600093, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.15071851
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161431361576600093, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.5276458
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161431361576600093, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161431361576600093, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161431361576600093, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161431361576600093, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161431361576600093, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161431361576600093, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161431361576600093, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6474362220122293926, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_Name
+      value: TutorialMars
+      objectReference: {fileID: 0}
+    - target: {fileID: 6474362220122293926, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747651544916638475, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747651546784296114, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7747651546853714571, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 979949605318214575, guid: 7953bc408c2112746aca5f962186a0d9, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 7953bc408c2112746aca5f962186a0d9, type: 3}
+--- !u!114 &343476252 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 979949605921254695, guid: 7953bc408c2112746aca5f962186a0d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 343476251}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 281c6c6834255694784fab8dae49bc8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &343476253 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 979949604581125332, guid: 7953bc408c2112746aca5f962186a0d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 343476251}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &346165466
 GameObject:
   m_ObjectHideFlags: 0
@@ -5137,6 +5470,37 @@ PrefabInstance:
       propertyPath: dialogueManager
       value: 
       objectReference: {fileID: 390646592}
+    - target: {fileID: 979949605907008298, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 979949605907008298, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: 'Hey !!! You are about to enter Urano''s minigame. Your goal is to protect
+        Uranus from asteroids. Do you feel it? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 979949605907008298, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: "A laser will appear magically from your hand whenever you open and
+        close your hand. \nUse the laser to destroy all asteroids and save the planet."
+      objectReference: {fileID: 0}
+    - target: {fileID: 979949605907008298, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: "First, extend your arm forward and remain in that position. \nSecond,
+        open the hand to use the laser and close it to recharge."
+      objectReference: {fileID: 0}
+    - target: {fileID: 979949605907008298, guid: 7953bc408c2112746aca5f962186a0d9,
+        type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: "Remember that the laser's maximum duration is 3 seconds. After that
+        time, it will stop working. Close your hand as frequently as you can to regain
+        power. \nAre you ready? Click \u201C PLAY\u201D  to start the game! GOOD
+        LUCK!"
+      objectReference: {fileID: 0}
     - target: {fileID: 979949605921254695, guid: 7953bc408c2112746aca5f962186a0d9,
         type: 3}
       propertyPath: animator
@@ -5200,7 +5564,7 @@ PrefabInstance:
     - target: {fileID: 6474362220122293926, guid: 7953bc408c2112746aca5f962186a0d9,
         type: 3}
       propertyPath: m_Name
-      value: TutorialUranus (1)
+      value: TutorialUranus
       objectReference: {fileID: 0}
     - target: {fileID: 6474362220122293926, guid: 7953bc408c2112746aca5f962186a0d9,
         type: 3}
