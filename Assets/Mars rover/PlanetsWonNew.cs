@@ -10,13 +10,15 @@ public class PlanetsWonNew : MonoBehaviour
     public Text numPlanetsWon;
     public Text aliensFound;
     public Text aliensTotal;
-    public int found = 0;
-    public int total = 0;
+    private int found = 0;
+    public int total = 20;
+    private string numFound;
     private const int four = 4;
     private const int three = 3;
     private const int two = 2;
     private const int one = 1;
     public int numberOfPlanets = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,9 +33,9 @@ public class PlanetsWonNew : MonoBehaviour
 
     public void PlanetsWonn()
     {
-
-        found = Convert.ToInt32(aliensFound);
-        total = Convert.ToInt32(aliensTotal);
+        numFound = aliensFound.text;
+        found = Int32.Parse(numFound);
+        
 
         if(found == total)
         {

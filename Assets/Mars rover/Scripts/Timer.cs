@@ -18,10 +18,16 @@ public class Timer : MonoBehaviour
     public float tempTime = 0;
     public bool pause = false;
     public bool restart = false;
-    public GameObject marsMenu;
+    public GameObject rover;
+    public GameObject ground;
     public GameObject game;
     public GameObject alien;
     public MovementRover roverIsMoving;
+    public GameObject alienFound;
+    public GameObject alienTotal;
+    public GameObject alienFoundLabel;
+
+
 
 
     //I want to enable and disenable the "GO!" text at the beginning of the game, after 1 second
@@ -74,12 +80,17 @@ public class Timer : MonoBehaviour
     void OpenMenu()
     {
         menu.SetActive(true);
+        //menu.transform.position = new Vector3(0.0f, 2.0f, 1.0f);
         timeOver.SetActive(true);
         pauseGame.SetActive(false);
         win.SetActive(false);
-        marsMenu.SetActive(false);
+        rover.SetActive(false);
+        ground.SetActive(false);
         game.SetActive(false);
         alien.SetActive(false);
+        alienFound.SetActive(false);
+        alienFoundLabel.SetActive(false);
+        alienTotal.SetActive(false);
         
     }
 
@@ -90,6 +101,16 @@ public class Timer : MonoBehaviour
         if(pause == true)
         {
             timeValue = tempTime;
+            menu.SetActive(true);
+            //menu.transform.position = new Vector3(0.0f, 2.0f, 1.0f);
+            timeOver.SetActive(false);
+            pauseGame.SetActive(true);
+            win.SetActive(false);
+            rover.SetActive(false);
+            ground.SetActive(false);
+            game.SetActive(false);
+            alien.SetActive(false);
+          // menu.transform.position = new Vector3(0.0f, 2.0f, 1.0f);
             var clones = GameObject.FindGameObjectsWithTag("Alien");
             for (int i = 0; i < clones.Length; i++)
             {
@@ -97,10 +118,22 @@ public class Timer : MonoBehaviour
                 //Destroy(clone);
                 clone.SetActive(false);
             }
-            pause = false;
+            alienFound.SetActive(false);
+            alienFoundLabel.SetActive(false);
+            alienTotal.SetActive(false);
+            game.SetActive(false);
+            //pause = false;
+             
         
         }else
-        {
+        {   
+            timeOver.SetActive(false);
+            win.SetActive(false);
+            rover.SetActive(true);
+            ground.SetActive(true);
+            game.SetActive(true);
+            //menu.transform.position = new Vector3(0.0f, 2.0f, 1.0f);
+            alien.SetActive(true);
             var clones = GameObject.FindGameObjectsWithTag("Alien");
             for (int i = 0; i < clones.Length; i++)
             {
@@ -108,6 +141,11 @@ public class Timer : MonoBehaviour
                 //Destroy(clone);
                 clone.SetActive(true);
             }
+            alienFound.SetActive(true);
+            alienFoundLabel.SetActive(true);
+            alienTotal.SetActive(true);
+            pauseGame.SetActive(false);
+            menu.SetActive(false);
         }
        
     }
@@ -123,6 +161,9 @@ public class Timer : MonoBehaviour
             countdown.enabled = true;
             Countdown();
             restart = false;
+            alienFound.SetActive(true);
+            alienFoundLabel.SetActive(true);
+            alienTotal.SetActive(true);
         }
        
     }
