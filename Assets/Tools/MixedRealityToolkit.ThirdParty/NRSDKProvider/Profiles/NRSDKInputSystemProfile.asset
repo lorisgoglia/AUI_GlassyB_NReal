@@ -33,11 +33,11 @@ MonoBehaviour:
     runtimePlatform: 15
     deviceManagerProfile: {fileID: 0}
   - componentType:
-      reference: Microsoft.MixedReality.Toolkit.Input.InputSimulationService, Microsoft.MixedReality.Toolkit.Services.InputSimulation
-    componentName: Input Simulation Service
+      reference: Microsoft.MixedReality.Toolkit.Input.InputRecordingService, Microsoft.MixedReality.Toolkit.Services.InputAnimation
+    componentName: Input Recording Service
     priority: 0
-    runtimePlatform: 208
-    deviceManagerProfile: {fileID: 11400000, guid: 3009660326f2f994d88c25c96eef596e,
+    runtimePlatform: -1
+    deviceManagerProfile: {fileID: 11400000, guid: d0f5a7f6d1f9f0b4cb6eb35c797a0f04,
       type: 2}
   focusProviderType:
     reference: Microsoft.MixedReality.Toolkit.Input.FocusProvider, Microsoft.MixedReality.Toolkit.Services.InputSystem
