@@ -7,10 +7,12 @@ using UnityEngine.UI;
 public class ToCheck : MonoBehaviour
 {
 
-    [SerializeField] private bool value = false;
+    
     [SerializeField] public Text aliensFound;
+    [SerializeField] public Text aliensFound1;
     [SerializeField] public float numberAliensFound = 0;
     public ParticleSystem DestroyedEffect;
+    public GameObject areaCheck;
     //public AudioSource AudioEffect;
 
     
@@ -40,11 +42,12 @@ public class ToCheck : MonoBehaviour
                 {
                     numberAliensFound++;
                     aliensFound.text = string.Format("{0}", numberAliensFound); //printing the value
+                    aliensFound1.text = string.Format("{0}", numberAliensFound); //printing the value in the menu
             
                 }
-                value = false;
+                
 
-                gameObject.SetActive(false); //disactivate AreaCheck during the movement of the rover
+                areaCheck.SetActive(false); //disactivate AreaCheck during the movement of the rover
             }
            
     }

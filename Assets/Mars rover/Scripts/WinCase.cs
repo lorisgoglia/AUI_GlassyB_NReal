@@ -7,7 +7,7 @@ using System;
 public class WinCase : MonoBehaviour
 {
 
-    public int total = 20;
+    public int total = 1;
     public Text aliensFound;
     private string numFound;
     private int found = 0;
@@ -18,23 +18,29 @@ public class WinCase : MonoBehaviour
     public GameObject menuTimeOver;
     public GameObject menuPause;
     public GameObject alien;
+    public GameObject alien2;
+    public GameObject menuCanvas;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        numFound = aliensFound.text;
-        found = Int32.Parse(numFound);
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+        numFound = aliensFound.text;
+        found = Int32.Parse(numFound);
+       
+
         if(found == total)
         {
-            rover.GetComponent<MeshRenderer>().enabled = false;
+            rover.SetActive(false);
             ground.SetActive(false);
             alien.SetActive(false);
+            alien2.SetActive(false);
             var clones = GameObject.FindGameObjectsWithTag("Alien");
             for (int i = 0; i < clones.Length; i++)
             {
@@ -42,6 +48,7 @@ public class WinCase : MonoBehaviour
                 //Destroy(clone);
                 clone.SetActive(false);
             }
+            menuCanvas.SetActive(false);
             menu.SetActive(true);
             //menu.transform.position = new Vector3(0.0f, 2.0f, 1.0f);
             menuPause.SetActive(false);

@@ -11,7 +11,7 @@ public class PlanetsWonNew : MonoBehaviour
     public Text aliensFound;
     public Text aliensTotal;
     private int found = 0;
-    public int total = 20;
+    public int total = 1;
     private string numFound;
     private const int four = 4;
     private const int three = 3;

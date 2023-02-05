@@ -12,6 +12,7 @@ public class Spawneralien : MonoBehaviour
     [SerializeField] private int timeSpawn = 7;
     [SerializeField] private int aliensNumber = 3;
     [SerializeField] private bool showSpawnArea = true;
+    public GameObject ground;
     
 
 
@@ -23,6 +24,11 @@ public class Spawneralien : MonoBehaviour
         StartCoroutine(TimeSpawnDefiner());
         //germSlime.SetActive(false);
                 
+    }
+
+    void Update()
+    {
+        center = transform.position;
     }
 
 
@@ -37,7 +43,7 @@ public class Spawneralien : MonoBehaviour
 
     IEnumerator TimeSpawnDefiner()
     {
-        while(true)
+        for(int i = 0; i<3; i++)
         {
         
             //yield on a new YieldInstruction that waits for 7 seconds.
@@ -58,7 +64,18 @@ public class Spawneralien : MonoBehaviour
             SpawnAliens();
         }
         
-         
+    }
+
+    //When I click on Restart on the menu I disactive all the old aliens
+    public void DisactiveAliensInRestart()
+    {
+        var clones = GameObject.FindGameObjectsWithTag("Alien");
+        for (int i = 0; i < clones.Length; i++)
+        {
+            GameObject clone = clones[i];
+            //Destroy(clone);
+            clone.SetActive(false);
+        }
     }
 
 
@@ -69,7 +86,7 @@ public class Spawneralien : MonoBehaviour
 
         Vector3 pos = center + new Vector3(Random.Range((-size.x/2) - 0.1f , (size.x/2) - 0.1f), Random.Range((-size.y/2) - 0.1f, (size.y/2) - 0.1f), Random.Range((-size.z/2) - 0.1f, (size.z/2)- 0.1f));
 
-        Instantiate(germSlime, pos, Quaternion.identity);
+        Instantiate(germSlime, pos, Quaternion.identity, ground.transform);
             
     }
 

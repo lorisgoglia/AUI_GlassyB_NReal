@@ -22,6 +22,7 @@ public class Timer : MonoBehaviour
     public GameObject ground;
     public GameObject game;
     public GameObject alien;
+    public GameObject alien2;
     public MovementRover roverIsMoving;
     public GameObject alienFound;
     public GameObject alienTotal;
@@ -49,6 +50,8 @@ public class Timer : MonoBehaviour
     {
         menu.SetActive(false);
         pauseGame.SetActive(false);
+        win.SetActive(false);
+        timeOver.SetActive(false);
        
     }
 
@@ -88,6 +91,7 @@ public class Timer : MonoBehaviour
         ground.SetActive(false);
         game.SetActive(false);
         alien.SetActive(false);
+        alien2.SetActive(false);
         alienFound.SetActive(false);
         alienFoundLabel.SetActive(false);
         alienTotal.SetActive(false);
@@ -110,6 +114,7 @@ public class Timer : MonoBehaviour
             ground.SetActive(false);
             game.SetActive(false);
             alien.SetActive(false);
+            alien2.SetActive(false);
           // menu.transform.position = new Vector3(0.0f, 2.0f, 1.0f);
             var clones = GameObject.FindGameObjectsWithTag("Alien");
             for (int i = 0; i < clones.Length; i++)
@@ -122,10 +127,10 @@ public class Timer : MonoBehaviour
             alienFoundLabel.SetActive(false);
             alienTotal.SetActive(false);
             game.SetActive(false);
-            //pause = false;
+            pause = false;
              
         
-        }else
+        }/*else
         {   
             timeOver.SetActive(false);
             win.SetActive(false);
@@ -134,6 +139,7 @@ public class Timer : MonoBehaviour
             game.SetActive(true);
             //menu.transform.position = new Vector3(0.0f, 2.0f, 1.0f);
             alien.SetActive(true);
+            alien2.SetActive(true);
             var clones = GameObject.FindGameObjectsWithTag("Alien");
             for (int i = 0; i < clones.Length; i++)
             {
@@ -146,7 +152,7 @@ public class Timer : MonoBehaviour
             alienTotal.SetActive(true);
             pauseGame.SetActive(false);
             menu.SetActive(false);
-        }
+        }*/
        
     }
 
@@ -157,7 +163,7 @@ public class Timer : MonoBehaviour
         if(restart == true)
         {
             timeStart = 4;
-            timeValue = 60;
+            timeValue = 5;
             countdown.enabled = true;
             Countdown();
             restart = false;
@@ -206,6 +212,7 @@ public class Timer : MonoBehaviour
         {
                 
             Pause(pause);
+            pause = false;
             timeValue -= Time.deltaTime;
             tempTime = timeValue;
 

@@ -15,7 +15,8 @@ public class KeepPosition : MonoBehaviour
     void Update()
     {
         //transform.position = new Vector3(0.0f, 2.0f, 1.0f);
-        transform.position = camera.transform.position + new Vector3(0.0f, -(0.005f), 0.3f);
+        transform.position = camera.transform.position + new Vector3(0.0f, 0.0f, 0.5f);
+        //transform.Translate(camera.transform.forward * Time.deltaTime);
        
     }
 }
