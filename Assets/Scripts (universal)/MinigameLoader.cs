@@ -8,6 +8,7 @@ public class MinigameLoader : MonoBehaviour
     public GameObject uranusScene;
     public GameObject marsScene;
     public GameObject uranusTutorialScene;
+    public GameObject marsTutorialScene;
 
     public FollowCamera followScript;
     public GameObject camera;
@@ -25,6 +26,7 @@ public class MinigameLoader : MonoBehaviour
         animator.SetBool("IsIn", false);
         sunnyScene.SetActive(false);
         uranusTutorialScene.SetActive(true);
+        uranusTutorialScene.GetComponent<BeginTutorial>().enabled = true;
     }
 
     public void TutorialToUranus()
@@ -40,11 +42,18 @@ public class MinigameLoader : MonoBehaviour
         sunnyScene.SetActive(true);
     }
 
-    public void SunnyToMars()
+    public void sunnyToMarsTutorial()
     {
-        animator.SetBool("IsIn", false);
-
+        //animator.SetBool("IsIn", false);
         sunnyScene.SetActive(false);
+        marsTutorialScene.SetActive(true);
+        marsTutorialScene.GetComponent<BeginTutorial>().enabled = true;
+    }
+
+    public void TutorialToMars()
+    {
+
+        marsTutorialScene.SetActive(false);
         marsScene.SetActive(true);
         //aggiungere codice per spostare camera come figlio del rover
         //followScript.enabled = true;
