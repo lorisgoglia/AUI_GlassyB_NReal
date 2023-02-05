@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using NRKernal;
 using UnityEngine.UI;
+
 public class TrackingImageVisualizer : MonoBehaviour
 {
 
     public NRTrackableImage image;
     public GameObject contorno;
-    
+    public Text text;
 
 
     [SerializeField] public GameObject btnMars;
@@ -38,6 +39,7 @@ public class TrackingImageVisualizer : MonoBehaviour
         if (image == null)
         {
             contorno.SetActive(false);
+            text.color = new Color(0, 0, 0, 0);
             return;
         }
         
@@ -46,6 +48,7 @@ public class TrackingImageVisualizer : MonoBehaviour
         transform.position = center.position;
         transform.rotation = center.rotation;
         contorno.SetActive(true);
+        text.color = new Color(0, 0, 0, 1);
         
 
 
