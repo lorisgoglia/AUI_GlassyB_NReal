@@ -22,6 +22,7 @@ public class PlanetsWonUranus : MonoBehaviour
     [SerializeField] private GameObject uranus;
 
     // Constants for the number of planets won
+    private const int four = 4;
     private const int three = 3;
     private const int two = 2;
     private const int one = 1;
@@ -45,14 +46,20 @@ public class PlanetsWonUranus : MonoBehaviour
     // Method to determine the number of planets won based on the current health of Uranus
     public void PlanetsWon()
     {
-        // If Uranus has full health, set the number of planets won to 3 and update the UI Text element
+        // If Uranus has full health, set the number of planets won to 4 and update the UI Text element
         if (uranusLife.currentHealth == uranusLife.maxHealth)
+        {
+            planetsWon.text = four.ToString();
+            numberOfPlanets = four;
+        }
+        // If Uranus has more than half health, set the number of planets won to 3 and update the UI Text element
+        else if (uranusLife.currentHealth < uranusLife.maxHealth && uranusLife.currentHealth > (uranusLife.maxHealth / 2))
         {
             planetsWon.text = three.ToString();
             numberOfPlanets = three;
         }
-        // If Uranus has more than half health, set the number of planets won to 2 and update the UI Text element
-        else if (uranusLife.currentHealth < uranusLife.maxHealth && uranusLife.currentHealth >= (uranusLife.maxHealth / 2))
+        // If Uranus has half health, set the number of planets won to 2 and update the UI Text element
+        else if (uranusLife.currentHealth < uranusLife.maxHealth && uranusLife.currentHealth == (uranusLife.maxHealth / 2))
         {
             planetsWon.text = two.ToString();
             numberOfPlanets = two;
