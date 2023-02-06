@@ -11,6 +11,9 @@ public class TrackingImageVisualizer : MonoBehaviour
     public GameObject contorno;
     public Text text;
     public Camera mainCamera;
+    public Canvas canvas;
+    public bool imageRecognized = false;
+    
 
 
     [SerializeField] public GameObject btnMars;
@@ -43,20 +46,23 @@ public class TrackingImageVisualizer : MonoBehaviour
             text.color = new Color(0, 0, 0, 0);
             return;
         }
-        
-        //var center = image.GetCenterPose();
-        //Vector2 sizeImage image.Size;
-        //transform.position = center.position;
-        //transform.rotation = center.rotation;
-        
-        contorno.SetActive(true);
-        text.color = new Color(0, 0, 0, 1);
+        else
+        {
 
-        transform.position = new Vector3(0, 0, mainCamera.transform.position.z + 1.5f);
-        
+            //var center = image.GetCenterPose();
+            //Vector2 sizeImage = image.Size;
+            //transform.position = center.position;
+            //transform.rotation = center.rotation;
 
+            if (imageRecognized == false)
+            {
+                imageRecognized = true;
+                StartCoroutine(TimeWaiting());
 
+            }
+        }
 
+        /*
         if (image.GetDataBaseIndex() == 0)
         {
 
@@ -73,8 +79,9 @@ public class TrackingImageVisualizer : MonoBehaviour
             //btnUranus.interactable = true;
 
         }
+        
 
-
+        */
 
     }
 
@@ -99,4 +106,35 @@ public class TrackingImageVisualizer : MonoBehaviour
        }
    }
    */
+
+    IEnumerator TimeWaiting()
+    {
+
+        Debug.Log("running IEnumerator");
+        int i = 0;
+        while (i<=1)
+        {
+            Debug.Log("sono nel while");
+            if (i == 1)
+            {
+                Debug.Log("sono nel if");
+
+                contorno.SetActive(false);
+                text.color = new Color(0, 0, 0, 0);
+                break;
+            }
+            Debug.Log("sono nel while dopo if");
+
+            contorno.SetActive(true);
+            text.color = new Color(0, 0, 0, 1);
+            canvas.transform.position = new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z + 1);
+            
+            i++;
+            yield return new WaitForSeconds(5f);
+
+
+        }
+
+    }
 }
+

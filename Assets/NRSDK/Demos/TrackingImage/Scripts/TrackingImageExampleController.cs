@@ -52,7 +52,7 @@ namespace NRKernal.NRExamples
                 {
                     NRDebugger.Info("Create new TrackingImageVisualizer!");
                     // Create an anchor to ensure that NRSDK keeps tracking this augmented image.
-                    visualizer = (TrackingImageVisualizer)Instantiate(TrackingImageVisualizerPrefab, image.GetCenterPose().position, image.GetCenterPose().rotation);
+                    visualizer = (TrackingImageVisualizer)Instantiate(TrackingImageVisualizerPrefab);
                     visualizer.image = image;
                     visualizer.transform.parent = transform;
                     m_Visualizers.Add(image.GetDataBaseIndex(), visualizer);
