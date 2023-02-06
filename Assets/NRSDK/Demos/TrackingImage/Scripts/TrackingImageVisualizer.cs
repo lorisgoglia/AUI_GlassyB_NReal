@@ -10,6 +10,7 @@ public class TrackingImageVisualizer : MonoBehaviour
     public NRTrackableImage image;
     public GameObject contorno;
     public Text text;
+    public Camera mainCamera;
 
 
     [SerializeField] public GameObject btnMars;
@@ -43,12 +44,15 @@ public class TrackingImageVisualizer : MonoBehaviour
             return;
         }
         
-        var center = image.GetCenterPose();
+        //var center = image.GetCenterPose();
         //Vector2 sizeImage image.Size;
-        transform.position = center.position;
-        transform.rotation = center.rotation;
+        //transform.position = center.position;
+        //transform.rotation = center.rotation;
+        
         contorno.SetActive(true);
         text.color = new Color(0, 0, 0, 1);
+
+        transform.position = new Vector3(0, 0, mainCamera.transform.position.z + 1.5f);
         
 
 

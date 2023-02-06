@@ -11,7 +11,7 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     public GameObject nextbtn;
     //Image img;
-
+    public bool tutorialOver = false;
     public Animator animator;
 
     void Start()
@@ -83,6 +83,7 @@ public class DialogueManager : MonoBehaviour
 
         if (sentences.Count == 0)
         {
+            tutorialOver = true;
             EndDialogue();
             return;
         }
