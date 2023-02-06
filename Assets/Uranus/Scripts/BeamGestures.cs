@@ -2,7 +2,7 @@
  * This script uses hand gestures from the user to control the game's laser and pause feature. 
  * The script uses coroutines to manage the duration of the laser and the time until the game starts. 
  * The script also uses switch statements to check the current hand gesture of the left and right hand and performs different actions based on
- * the gesture. The script also sets the position and rotation of the laser to match the position and rotation of the user's right hand. 
+ * the gesture. Moreover, the script sets the position and rotation of the laser to match the position and rotation of the user's right hand. 
  * Additionally, it has a GoPause() function that can be called to open the pause menu.
  */
 
