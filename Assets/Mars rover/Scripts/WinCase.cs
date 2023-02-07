@@ -7,7 +7,7 @@ using System;
 public class WinCase : MonoBehaviour
 {
 
-    public int total = 1;
+    public int total = 12;
     public Text aliensFound;
     private string numFound;
     private int found = 0;
@@ -20,6 +20,7 @@ public class WinCase : MonoBehaviour
     public GameObject alien;
     public GameObject alien2;
     public GameObject menuCanvas;
+    
 
 
     // Start is called before the first frame update
@@ -37,7 +38,6 @@ public class WinCase : MonoBehaviour
 
         if(found == total)
         {
-            rover.SetActive(false);
             ground.SetActive(false);
             alien.SetActive(false);
             alien2.SetActive(false);
@@ -50,7 +50,7 @@ public class WinCase : MonoBehaviour
             }
             menuCanvas.SetActive(false);
             menu.SetActive(true);
-            //menu.transform.position = new Vector3(0.0f, 2.0f, 1.0f);
+            rover.SetActive(false);
             menuPause.SetActive(false);
             menuTimeOver.SetActive(false);
             menuWin.SetActive(true);

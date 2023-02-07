@@ -16,7 +16,7 @@ public class Timer : MonoBehaviour
     public GameObject pauseGame;
     public GameObject win;
     public float tempTime = 0;
-    public bool pause = false;
+    //public bool pause = false;
     public bool restart = false;
     public GameObject rover;
     public GameObject ground;
@@ -27,6 +27,10 @@ public class Timer : MonoBehaviour
     public GameObject alienFound;
     public GameObject alienTotal;
     public GameObject alienFoundLabel;
+    public Spawneralien spawn;
+    public Spawneralien spawn2;
+
+
 
 
 
@@ -83,11 +87,10 @@ public class Timer : MonoBehaviour
     void OpenMenu()
     {
         menu.SetActive(true);
-        //menu.transform.position = new Vector3(0.0f, 2.0f, 1.0f);
+        rover.SetActive(false);
         timeOver.SetActive(true);
         pauseGame.SetActive(false);
         win.SetActive(false);
-        rover.SetActive(false);
         ground.SetActive(false);
         game.SetActive(false);
         alien.SetActive(false);
@@ -100,22 +103,19 @@ public class Timer : MonoBehaviour
 
 
    //Stop time when in pause, so timeValue keep the last saved value in tempTime
-    public void Pause(bool pause)
+    public void isPause()
     {
-        if(pause == true)
-        {
+        //if(pause == true)
+        
             timeValue = tempTime;
             menu.SetActive(true);
-            //menu.transform.position = new Vector3(0.0f, 2.0f, 1.0f);
+            rover.SetActive(false);
             timeOver.SetActive(false);
             pauseGame.SetActive(true);
             win.SetActive(false);
-            rover.SetActive(false);
             ground.SetActive(false);
-            game.SetActive(false);
             alien.SetActive(false);
             alien2.SetActive(false);
-          // menu.transform.position = new Vector3(0.0f, 2.0f, 1.0f);
             var clones = GameObject.FindGameObjectsWithTag("Alien");
             for (int i = 0; i < clones.Length; i++)
             {
@@ -123,23 +123,25 @@ public class Timer : MonoBehaviour
                 //Destroy(clone);
                 clone.SetActive(false);
             }
-            alienFound.SetActive(false);
-            alienFoundLabel.SetActive(false);
-            alienTotal.SetActive(false);
             game.SetActive(false);
-            pause = false;
+            
+            
              
-        
-        }/*else
-        {   
+    }
+
+    public void isNotPause()
+    {
+           
             timeOver.SetActive(false);
             win.SetActive(false);
             rover.SetActive(true);
             ground.SetActive(true);
             game.SetActive(true);
-            //menu.transform.position = new Vector3(0.0f, 2.0f, 1.0f);
             alien.SetActive(true);
             alien2.SetActive(true);
+            spawn.spawnAliensAgain();
+            spawn2.spawnAliensAgain();
+
             var clones = GameObject.FindGameObjectsWithTag("Alien");
             for (int i = 0; i < clones.Length; i++)
             {
@@ -147,12 +149,9 @@ public class Timer : MonoBehaviour
                 //Destroy(clone);
                 clone.SetActive(true);
             }
-            alienFound.SetActive(true);
-            alienFoundLabel.SetActive(true);
-            alienTotal.SetActive(true);
             pauseGame.SetActive(false);
             menu.SetActive(false);
-        }*/
+        
        
     }
 
@@ -163,10 +162,11 @@ public class Timer : MonoBehaviour
         if(restart == true)
         {
             timeStart = 4;
-            timeValue = 5;
+            timeValue = 181;
             countdown.enabled = true;
             Countdown();
             restart = false;
+            spawn.DisactiveAliensInRestart();
             alienFound.SetActive(true);
             alienFoundLabel.SetActive(true);
             alienTotal.SetActive(true);
@@ -211,8 +211,7 @@ public class Timer : MonoBehaviour
         if(timeValue > 0) //now I can start decrementing the time remaining checking if I'm in pause or not 
         {
                 
-            Pause(pause);
-            pause = false;
+            
             timeValue -= Time.deltaTime;
             tempTime = timeValue;
 

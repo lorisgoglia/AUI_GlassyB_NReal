@@ -11,12 +11,13 @@ public class PlanetsWonNew : MonoBehaviour
     public Text aliensFound;
     public Text aliensTotal;
     private int found = 0;
-    public int total = 1;
+    public int total = 12; 
     private string numFound;
     private const int four = 4;
     private const int three = 3;
     private const int two = 2;
     private const int one = 1;
+    private const int zero = 0;
     public int numberOfPlanets = 0;
 
     // Start is called before the first frame update
@@ -42,21 +43,26 @@ public class PlanetsWonNew : MonoBehaviour
             numPlanetsWon.text = four.ToString();
             numberOfPlanets = four;
         }
-        else if(found < total && found >= (total * 3/4))
+        else if(found < total && found >= (total * 0.75f))
         {
             numPlanetsWon.text = three.ToString();
             numberOfPlanets = three;
         }
-        else if(found < (total * 3/4) && found >= (total / 2))
+        else if(found < (total * 0.75f) && found >= (total / 2.0f))
         {
             numPlanetsWon.text = two.ToString();
             numberOfPlanets = two;
         }
-        else if(found < (total / 2) && found > 0)
+        else if(found < (total / 2.0f) && found > 0)
         {
             numPlanetsWon.text = one.ToString();
             numberOfPlanets = one;
+        }else
+        {
+            numPlanetsWon.text = zero.ToString();
+            numberOfPlanets = zero;
         }
+        
 
     }
 

@@ -12,6 +12,10 @@ PrefabInstance:
       value: GermSpikeModel Variant
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6fd3b5c2df6073f4ea432cc9086b6f00, type: 3}
       propertyPath: m_TagString
       value: Alien
       objectReference: {fileID: 0}
@@ -149,7 +153,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5815741313918164093}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243422288981298744, guid: d145ef7ec5c612648aba1716a7f53ac9,
     type: 2}
@@ -251,6 +255,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 118f0d0e9a6d1324ba0a7ebb748f612e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rover: {fileID: 8720388561856529519, guid: 030a3f6476d374d7ca2a0fd7cdd292f6, type: 3}
-  movement: {fileID: 1880034733929660728, guid: 8ee2088d374d842f69ca18cf75c9f1c3,
-    type: 3}

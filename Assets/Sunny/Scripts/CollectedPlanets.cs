@@ -6,36 +6,52 @@ public class CollectedPlanets : MonoBehaviour
 {
 
     public GameObject[] planets;
-    public int collected=0;
+    public int collected = 0;
     PlanetsWonUranus planetsWonUranus;
     [SerializeField] private GameObject uranusPlanets;
+    //[SerializeField] private GameObject marsPlanets;
+    //[SerializeField] private GameObject marsPlanets1;
+    public PlanetsWonNew wonMars;
+    public PlanetsWonNew wonMars1;
 
     private void Awake()
     {
-
+        //wonMars = marsPlanets.GetComponent<PlanetsWonNew>();
+        //wonMars1 = marsPlanets1.GetComponent<PlanetsWonNew>();
         planetsWonUranus = uranusPlanets.GetComponent<PlanetsWonUranus>();
         foreach (GameObject planet in planets)
             planet.SetActive(false);
     }
     private void Update()
     {
+        Debug.Log(collected);
         UpdateVisiblePlanets();
     }
     public void updatePlanets()
     {
         int num = planetsWonUranus.numberOfPlanets;
+        int val = wonMars.numberOfPlanets;
+        int val1 = wonMars1.numberOfPlanets;
         collected += num;
+        collected += val;
+        collected += val1;
+        
     }
 
     public void UpdateVisiblePlanets()
     {
+       
+        Debug.Log("Updating planets");
         for(int i = 0; i < collected; i++)
         {
+            Debug.Log("adding "+i+"plantes");
+
             planets[i].SetActive(true);
         }
-        for (int i = collected; i < 9; i++)
+        for (int j = collected; j < 9; j++)
         {
-            planets[i].SetActive(false);
+            Debug.Log("Remaining"+j+"planets");
+            planets[j].SetActive(false);
         }
     }
 

@@ -18,7 +18,7 @@ public class Collider1 : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("Rock"))
+        if(other.gameObject.CompareTag("Rock") || other.gameObject.CompareTag("Barrier"))
         {
             stop = true;
         }

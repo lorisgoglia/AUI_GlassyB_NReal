@@ -15,6 +15,9 @@ TagManager:
   - Camera
   - Rover
   - MainCameraMRTK
+  - Rock
+  - Area
+  - Barrier
   layers:
   - Default
   - TransparentFX

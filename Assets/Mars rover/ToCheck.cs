@@ -12,9 +12,20 @@ public class ToCheck : MonoBehaviour
     [SerializeField] public Text aliensFound1;
     [SerializeField] public float numberAliensFound = 0;
     public ParticleSystem DestroyedEffect;
-    public GameObject areaCheck;
+    
     //public AudioSource AudioEffect;
 
+    // Start is called before the first frame update
+    void Start()
+    {
+       
+    }
+
+   
+    void Update()
+    {
+       
+    }
     
     
     
@@ -38,7 +49,7 @@ public class ToCheck : MonoBehaviour
                 
                // Debug.Log("object {i} is an Alien");
                 
-                if(numberAliensFound < 10)
+                if(numberAliensFound < 12) //cambia in 12
                 {
                     numberAliensFound++;
                     aliensFound.text = string.Format("{0}", numberAliensFound); //printing the value
@@ -47,7 +58,7 @@ public class ToCheck : MonoBehaviour
                 }
                 
 
-                areaCheck.SetActive(false); //disactivate AreaCheck during the movement of the rover
+                gameObject.SetActive(false); //disactivate AreaCheck during the movement of the rover
             }
            
     }

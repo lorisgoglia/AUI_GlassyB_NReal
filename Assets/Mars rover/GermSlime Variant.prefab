@@ -69,6 +69,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3129450724137464249, guid: 4d530a4606a344647842bd8b7fca8bb5,
         type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129450724137464249, guid: 4d530a4606a344647842bd8b7fca8bb5,
+        type: 3}
       propertyPath: m_TagString
       value: Alien
       objectReference: {fileID: 0}
@@ -129,9 +134,8 @@ AudioSource:
   m_GameObject: {fileID: 4826415298660293507}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243422288981298744, guid: d145ef7ec5c612648aba1716a7f53ac9,
-    type: 2}
-  m_audioClip: {fileID: 8300000, guid: e8ed11207c86d614cbf486a93a782359, type: 3}
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -270,6 +274,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 118f0d0e9a6d1324ba0a7ebb748f612e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rover: {fileID: 8720388561856529519, guid: 030a3f6476d374d7ca2a0fd7cdd292f6, type: 3}
-  movement: {fileID: 1880034733929660728, guid: 8ee2088d374d842f69ca18cf75c9f1c3,
-    type: 3}

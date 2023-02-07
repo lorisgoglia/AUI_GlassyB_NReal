@@ -13,7 +13,7 @@ public class ColliderRockAlien : MonoBehaviour
     }
     void Update()
     {
-
+        SoundManagerScript.PlaySound("germSound");
     }
 
     

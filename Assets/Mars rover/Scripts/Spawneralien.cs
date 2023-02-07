@@ -38,6 +38,7 @@ public class Spawneralien : MonoBehaviour
         center = transform.position;
          
         StartCoroutine(TimeSpawnDefiner());
+       
     }
 
 

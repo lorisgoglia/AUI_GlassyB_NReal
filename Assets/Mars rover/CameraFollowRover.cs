@@ -8,10 +8,11 @@ public class CameraFollowRover : MonoBehaviour
     public GameObject rover;
     public GameObject camera;
     public GameObject userView;
+    
     public GameObject roverView;
 
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
         userView.transform.parent = camera.transform;
         roverView.transform.parent = camera.transform;

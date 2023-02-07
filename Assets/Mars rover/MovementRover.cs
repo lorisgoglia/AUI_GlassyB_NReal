@@ -12,27 +12,19 @@ public class MovementRover : MonoBehaviour
     private Pose rightHandPointerPose;
     public Collider1 collider;
     private Vector3 pos;
-    public float rotationSpeed = 15.0f;
+    public float rotationSpeed = 5.0f;
     private Vector3 startPosition = new Vector3(0f,0f,0f);
     private Vector3 handPosition;
     private Rigidbody rigid;
     private bool go = false;
     private Vector3 newPosition;
     private Vector3 oldPosition;
-    //public GameObject menu;
     public GameObject rover;
-    //public GameObject ground;
-   // public GameObject menuWin;
-    //public GameObject menuTimeOver;
-    //public GameObject menuPause;
-    //public GameObject alien;
+    public GameObject roverView;
+    public GameObject game;
+    public GameObject areaCheck;
     public Timer time;
     
-
-    
-   
-
-
 
     // Start is called before the first frame update
     void Start()
@@ -57,7 +49,10 @@ public class MovementRover : MonoBehaviour
         switch (rightHandState.currentGesture)
         {
             case HandGesture.Point:
-                time.Pause(true);
+                //areaCheck.SetActive(true);
+                //roverView.SetActive(true);
+                //game.SetActive(false);
+
                 break;
             case HandGesture.Grab:
                  
@@ -84,7 +79,7 @@ public class MovementRover : MonoBehaviour
                 // if the rover touch a rock it's moved back
                 if((collider.stop) == true)
                 {
-                    transform.Translate(0, 0, 7);
+                    transform.Translate(0, 0, 3 * Time.deltaTime * 50.01f);
                     (collider.stop) = false;
                 }
                 
@@ -119,17 +114,8 @@ public class MovementRover : MonoBehaviour
                 break;
             case HandGesture.OpenHand:
                 // Show the pause menu and hide the other menus if the gesture is an open hand and lockPause is false
-                /*if (lockPause == false)
-                {*/
-                    //time.Pause(true);
-                    //time.Pause(true);
-                    /*menu.SetActive(true);
-                    rover.SetActive(false);
-                    menuPause.SetActive(true);
-                    menuWin.SetActive(false);
-                    menuTimeOver.SetActive(false);
-                    alien.SetActive(false);*/
-                
+                time.isPause();
+
                 break;
             default:
                 break;

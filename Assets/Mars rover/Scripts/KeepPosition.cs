@@ -5,18 +5,24 @@ using UnityEngine;
 public class KeepPosition : MonoBehaviour
 {
     public GameObject camera;
+    
     // Start is called before the first frame update
     void Start()
     {
+        
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        //transform.position = new Vector3(0.0f, 2.0f, 1.0f);
         transform.position = camera.transform.position + new Vector3(0.0f, 0.0f, 0.5f);
+        //transform.position = new Vector3(0.0f, 2.0f, 1.0f);
+        //transform.position = camera.transform.position + new Vector3(0.0f, 0.0f, 0.5f);
         //transform.Translate(camera.transform.forward * Time.deltaTime);
+        
        
     }
+
+    
 }
