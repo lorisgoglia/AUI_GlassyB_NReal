@@ -7,7 +7,7 @@ public class ChangeScene : MonoBehaviour
 {
     public GameObject hidedScene;
 
-    // Update is called once per frame
+    //Method used to keep the roverView canvas disactivated when I'm not taking photos
     void Update()
     {
         hidedScene.SetActive(false);

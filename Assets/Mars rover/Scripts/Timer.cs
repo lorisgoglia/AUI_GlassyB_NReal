@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public float timeValue = 181;
+    public float timeValue = 121;
     public Text timerText;
     public Text countdown;
     public Text goText;
@@ -16,7 +16,6 @@ public class Timer : MonoBehaviour
     public GameObject pauseGame;
     public GameObject win;
     public float tempTime = 0;
-    //public bool pause = false;
     public bool restart = false;
     public GameObject rover;
     public GameObject ground;
@@ -29,10 +28,6 @@ public class Timer : MonoBehaviour
     public GameObject alienFoundLabel;
     public Spawneralien spawn;
     public Spawneralien spawn2;
-
-
-
-
 
 
     //I want to enable and disenable the "GO!" text at the beginning of the game, after 1 second
@@ -49,7 +44,7 @@ public class Timer : MonoBehaviour
         
     }
 
-
+    //keep al the menu disactive during the game 
     void Start()
     {
         menu.SetActive(false);
@@ -105,7 +100,6 @@ public class Timer : MonoBehaviour
    //Stop time when in pause, so timeValue keep the last saved value in tempTime
     public void isPause()
     {
-        //if(pause == true)
         
             timeValue = tempTime;
             menu.SetActive(true);
@@ -120,7 +114,6 @@ public class Timer : MonoBehaviour
             for (int i = 0; i < clones.Length; i++)
             {
                 GameObject clone = clones[i];
-                //Destroy(clone);
                 clone.SetActive(false);
             }
             game.SetActive(false);
@@ -129,6 +122,7 @@ public class Timer : MonoBehaviour
              
     }
 
+    //Method to disactive the pause menu and reactivate the game
     public void isNotPause()
     {
            
@@ -162,7 +156,7 @@ public class Timer : MonoBehaviour
         if(restart == true)
         {
             timeStart = 4;
-            timeValue = 181;
+            timeValue = 121;
             countdown.enabled = true;
             Countdown();
             restart = false;
@@ -224,7 +218,6 @@ public class Timer : MonoBehaviour
             for (int i = 0; i < clones.Length; i++)
             {
                 GameObject clone = clones[i];
-                //Destroy(clone);
                 clone.SetActive(false);
             }
         }

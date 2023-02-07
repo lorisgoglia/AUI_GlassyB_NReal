@@ -71,14 +71,13 @@ public class MinigameLoader : MonoBehaviour
         marsTutorialScene.GetComponent<BeginTutorial>().enabled = true;
     }
 
-    public void TutorialToMars() //restart scenario
+    public void TutorialToMars() //restart scenario tutorial mars
     {
 
         marsTutorialScene.SetActive(false);
         marsScene.SetActive(true);
         ground.transform.position = new Vector3(-500.0f, -2.44f, -555.04f);
         ground.SetActive(true);
-        //move.ResetPosition();
         game.SetActive(true);
         rover.SetActive(true);
         menuCanvas.SetActive(true);
@@ -100,12 +99,9 @@ public class MinigameLoader : MonoBehaviour
         //aggiungere codice per spostare camera come figlio del rover
         //followScript.enabled = true;
         resetPosition();
-
-
-        //object1 is now the child of object2
     }
 
-    public void MarsToSunny()
+    public void MarsToSunny() //move back to sunny when I do quit on mars
     {
         camera.transform.parent = null;
         marsScene.SetActive(false);

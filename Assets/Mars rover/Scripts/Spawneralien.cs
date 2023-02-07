@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Script used tostart and control the spawning of aliens
 public class Spawneralien : MonoBehaviour
 {
 
@@ -10,7 +11,7 @@ public class Spawneralien : MonoBehaviour
     [SerializeField] private Vector3 size;
     [SerializeField] private GameObject germSlime;
     [SerializeField] private int timeSpawn = 7;
-    [SerializeField] private int aliensNumber = 3;
+    [SerializeField] private int aliensNumber = 5;
     [SerializeField] private bool showSpawnArea = true;
     public GameObject ground;
     
@@ -22,17 +23,17 @@ public class Spawneralien : MonoBehaviour
         center = transform.position;
         //Start the coroutine we define below named TimeSpawnDefiner.
         StartCoroutine(TimeSpawnDefiner());
-        //germSlime.SetActive(false);
                 
     }
 
+     
     void Update()
     {
         center = transform.position;
     }
 
 
-    //method to restart the spawner of aliens when I exit from the pause
+    //method to restart the spawner of aliens when I exit from the pause 
     public void spawnAliensAgain()
     {
         center = transform.position;
@@ -41,7 +42,7 @@ public class Spawneralien : MonoBehaviour
        
     }
 
-
+    //Wait 7 seconds to spawn 4 aliens
     IEnumerator TimeSpawnDefiner()
     {
         for(int i = 0; i<3; i++)
@@ -67,14 +68,13 @@ public class Spawneralien : MonoBehaviour
         
     }
 
-    //When I click on Restart on the menu I disactive all the old aliens
+    //When I click on Restart or Quit on the menu I disactive all the old aliens
     public void DisactiveAliensInRestart()
     {
         var clones = GameObject.FindGameObjectsWithTag("Alien");
         for (int i = 0; i < clones.Length; i++)
         {
             GameObject clone = clones[i];
-            //Destroy(clone);
             clone.SetActive(false);
         }
     }
@@ -83,7 +83,6 @@ public class Spawneralien : MonoBehaviour
     //method to spawn an alien in the area defined
     public void SpawnAliens()
     {
-        //germSlime.SetActive(true);
 
         Vector3 pos = center + new Vector3(Random.Range((-size.x/2) - 0.1f , (size.x/2) - 0.1f), Random.Range((-size.y/2) - 0.1f, (size.y/2) - 0.1f), Random.Range((-size.z/2) - 0.1f, (size.z/2)- 0.1f));
 
@@ -91,7 +90,7 @@ public class Spawneralien : MonoBehaviour
             
     }
 
-
+    //method to create the area of spawning
     private void OnDrawGizmosSelected()
     {
         if(!showSpawnArea)

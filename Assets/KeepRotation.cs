@@ -5,12 +5,8 @@ using UnityEngine;
 public class KeepRotation : MonoBehaviour
 {
     public GameObject camera;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
+    
+    //method to keep the rotation of the area check following the rotation of the camera
     // Update is called once per frame
     void Update()
     {

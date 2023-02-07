@@ -2,15 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script is used to keep the two tipes of alien awake when needed, used to solve a problem caused by the disactivation of the gameObject 
 public class Active : MonoBehaviour
 {
     public GameObject alienPink;
     public GameObject alienGreen;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

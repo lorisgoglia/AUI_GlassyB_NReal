@@ -22,14 +22,7 @@ public class WinCase : MonoBehaviour
     public GameObject menuCanvas;
     
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
-
-    // Update is called once per frame
+    // Control if the number of aliens found is the same of the toal number of alien to find, and then if it's true I open the win menu
     void Update()
     {
         numFound = aliensFound.text;
@@ -45,7 +38,6 @@ public class WinCase : MonoBehaviour
             for (int i = 0; i < clones.Length; i++)
             {
                 GameObject clone = clones[i];
-                //Destroy(clone);
                 clone.SetActive(false);
             }
             menuCanvas.SetActive(false);
