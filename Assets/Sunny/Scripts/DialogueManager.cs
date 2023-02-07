@@ -20,6 +20,9 @@ public class DialogueManager : MonoBehaviour
     public bool tutorialOver = false;
     public Animator animator;
 
+    private int counter = -1;
+    
+
     void Start()
     {
         sentences = new Queue<string>();
@@ -91,16 +94,16 @@ public class DialogueManager : MonoBehaviour
         //img.SetActive(false);
 
 
-        if (sentences.Count == 0)
+        if (sentences.Count == counter)
         {
             tutorialOver = true;
             EndDialogue();
             return;
         }
 
+        counter++;
 
-
-        string sentence = sentences.Dequeue();
+        string sentence = (string)sentences.ToArray().GetValue(counter);
         Debug.Log(sentence);
 
         if(sentence == "Through a large collaboration and exchange of data between Paris and Brera," +
@@ -144,7 +147,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         dialogueText.text = sentence;
-        sentencesBack.Enqueue(sentence);
+        //sentencesBack.Enqueue(sentence);
 
         Debug.Log(sentences);
         Debug.Log(sentencesBack);
@@ -157,17 +160,9 @@ public class DialogueManager : MonoBehaviour
 
         //img.SetActive(false);
 
+        counter--;
 
-        if (sentences.Count == 0)
-        {
-            tutorialOver = true;
-            EndDialogue();
-            return;
-        }
-
-
-
-        string sentence = sentencesBack.Dequeue();
+        string sentence = (string)sentences.ToArray().GetValue(counter);
         Debug.Log(sentence);
 
         if (sentence == "Through a large collaboration and exchange of data between Paris and Brera," +
@@ -212,7 +207,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         dialogueText.text = sentence;
-        sentences.Enqueue(sentence);
+        //sentences.Enqueue(sentence);
 
         Debug.Log(sentences);
         Debug.Log(sentencesBack);
