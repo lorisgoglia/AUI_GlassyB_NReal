@@ -18,6 +18,11 @@ TagManager:
   - Rock
   - Area
   - Barrier
+  - Lettera
+  - Schiaparelli
+  - MarsMap
+  - Oriani
+  - Cerulli
   layers:
   - Default
   - TransparentFX

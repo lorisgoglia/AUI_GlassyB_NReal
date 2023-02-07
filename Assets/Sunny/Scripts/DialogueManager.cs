@@ -9,14 +9,22 @@ public class DialogueManager : MonoBehaviour
     public TextMeshPro nameText;
     public TextMeshProUGUI dialogueText;
     private Queue<string> sentences;
+    private Queue<string> sentencesBack;
     public GameObject nextbtn;
-    //Image img;
+    public GameObject lettera;
+    public GameObject schiaparelli;
+    public GameObject oriani;
+    public GameObject marsMap;
+    public GameObject cerulli;
+
     public bool tutorialOver = false;
     public Animator animator;
 
     void Start()
     {
         sentences = new Queue<string>();
+        sentencesBack = new Queue<string>();
+
         //img = btn.GetComponent<Image>();
         //img.color = new Color(255, 255, 255, 255);
 
@@ -80,6 +88,8 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("[DisplayNextSentence running]");
 
+        //img.SetActive(false);
+
 
         if (sentences.Count == 0)
         {
@@ -93,9 +103,123 @@ public class DialogueManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         Debug.Log(sentence);
 
+        if(sentence == "Through a large collaboration and exchange of data between Paris and Brera," +
+            " Boscovich shared the information he received from Messier with his colleagues in Brera.")
+        {
+            lettera.SetActive(true);
+        }else if(sentence == "In his papers Schiaparelli called these “canali”, based on " +
+            "similar features that characterize Earth’s geography. He certainly did not expect " +
+            "to start a controversy that would last for decades!")
+        {
+            marsMap.SetActive(true);
+        }
+        else if (sentence == "The real origin of the Mars canals was revealed by another italian astronomer," +
+            " Vincenzo Cerulli.  He gave a convincing explanation, still generally accepted, after he himself" +
+            " observed Mars through a larger and more powerful telescope. ")
+        {
+            cerulli.SetActive(true);
+        }
+        else if (sentence == "In 1877 Schiaparelli published his first map of the planet Mars. This new and more " +
+            "precise map contained a web of fine straight lines, that would become even more complex in future maps.")
+        {
+            schiaparelli.SetActive(true);
+        }
+        else if (sentence == "It was thanks to Barnaba Oriani, astronomer of Brera ,that significant progress on " +
+            "the study of Uranus was made.")
+        {
+            oriani.SetActive(true);
+        }
+        else
+        {
+            oriani.SetActive(false);
+            schiaparelli.SetActive(false);
+            cerulli.SetActive(false);
+            marsMap.SetActive(false);
+            lettera.SetActive(false);
+
+
+
+
+
+        }
+
         dialogueText.text = sentence;
+        sentencesBack.Enqueue(sentence);
+
+        Debug.Log(sentences);
+        Debug.Log(sentencesBack);
 
     }
+
+    public void DisplayPreviousSentence()
+    {
+        Debug.Log("[DisplayNextSentence running]");
+
+        //img.SetActive(false);
+
+
+        if (sentences.Count == 0)
+        {
+            tutorialOver = true;
+            EndDialogue();
+            return;
+        }
+
+
+
+        string sentence = sentencesBack.Dequeue();
+        Debug.Log(sentence);
+
+        if (sentence == "Through a large collaboration and exchange of data between Paris and Brera," +
+            " Boscovich shared the information he received from Messier with his colleagues in Brera.")
+        {
+            lettera.SetActive(true);
+        }
+        else if (sentence == "In his papers Schiaparelli called these “canali”, based on " +
+           "similar features that characterize Earth’s geography. He certainly did not expect " +
+           "to start a controversy that would last for decades!")
+        {
+            marsMap.SetActive(true);
+        }
+        else if (sentence == "The real origin of the Mars canals was revealed by another italian astronomer," +
+            " Vincenzo Cerulli.  He gave a convincing explanation, still generally accepted, after he himself" +
+            " observed Mars through a larger and more powerful telescope. ")
+        {
+            cerulli.SetActive(true);
+        }
+        else if (sentence == "In 1877 Schiaparelli published his first map of the planet Mars. This new and more " +
+            "precise map contained a web of fine straight lines, that would become even more complex in future maps.")
+        {
+            schiaparelli.SetActive(true);
+        }
+        else if (sentence == "It was thanks to Barnaba Oriani, astronomer of Brera ,that significant progress on " +
+            "the study of Uranus was made.")
+        {
+            oriani.SetActive(true);
+        }
+        else
+        {
+            oriani.SetActive(false);
+            schiaparelli.SetActive(false);
+            cerulli.SetActive(false);
+            marsMap.SetActive(false);
+            lettera.SetActive(false);
+
+
+
+
+
+        }
+
+        dialogueText.text = sentence;
+        sentences.Enqueue(sentence);
+
+        Debug.Log(sentences);
+        Debug.Log(sentencesBack);
+
+
+    }
+
     void EndDialogue()
     {
         Debug.Log("End of conversation.");
