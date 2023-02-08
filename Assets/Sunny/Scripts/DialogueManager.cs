@@ -96,7 +96,6 @@ public class DialogueManager : MonoBehaviour
 
         if (sentences.Count == counter)
         {
-            tutorialOver = true;
             EndDialogue();
             return;
         }
@@ -140,11 +139,10 @@ public class DialogueManager : MonoBehaviour
             marsMap.SetActive(false);
             lettera.SetActive(false);
 
-
-
-
-
         }
+
+        if(sentence == "Finally , when you feel ready , click the “PLAY” button to start the game. GOOD LUCK !!!")
+            tutorialOver = true;
 
         dialogueText.text = sentence;
         //sentencesBack.Enqueue(sentence);
@@ -199,12 +197,9 @@ public class DialogueManager : MonoBehaviour
             cerulli.SetActive(false);
             marsMap.SetActive(false);
             lettera.SetActive(false);
-
-
-
-
-
         }
+
+
 
         dialogueText.text = sentence;
         //sentences.Enqueue(sentence);
@@ -215,6 +210,14 @@ public class DialogueManager : MonoBehaviour
 
     }
 
+    public void DisplayLastSentence()
+    {
+        counter = sentences.Count-1;
+
+        string sentence = (string)sentences.ToArray().GetValue(counter);
+        dialogueText.text = sentence;
+
+    }
     void EndDialogue()
     {
         Debug.Log("End of conversation.");
