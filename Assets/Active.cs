@@ -8,10 +8,12 @@ public class Active : MonoBehaviour
     public GameObject alienPink;
     public GameObject alienGreen;
 
+   
     // Update is called once per frame
     void Update()
     {
         alienPink.SetActive(true);
         alienGreen.SetActive(true);
     }
+
 }

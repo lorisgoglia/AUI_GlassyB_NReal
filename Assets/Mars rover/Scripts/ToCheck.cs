@@ -13,6 +13,7 @@ public class ToCheck : MonoBehaviour
     [SerializeField] public float numberAliensFound = 0;
     public ParticleSystem DestroyedEffect;
     
+    
    
     //method to check if there is an alien that collides with the area of photo and increment the number of aliens found and then eliminate the corrispondent alien, N.B. this method disactive one alien per time
     private void OnTriggerEnter(Collider other)
@@ -20,6 +21,7 @@ public class ToCheck : MonoBehaviour
 
             if(other.gameObject.CompareTag("Alien"))
             {
+                SoundActivation.PlaySound("photoEffect"); // play the germ sound when it disappears
                 Instantiate(DestroyedEffect, other.gameObject.transform.position, Quaternion.identity);
                 other.gameObject.SetActive(false);
             
@@ -36,8 +38,6 @@ public class ToCheck : MonoBehaviour
             }
            
     }
-
-
 
 }
 

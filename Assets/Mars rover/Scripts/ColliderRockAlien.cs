@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class ColliderRockAlien : MonoBehaviour
 {
-    
-
     //move back the alien when find a rock or another alien
     private void OnTriggerEnter(Collider other)
     {
