@@ -36,6 +36,8 @@ public class MinigameLoader : MonoBehaviour
     public Animator animator;
     public CollectedPlanets collectedPlanets;
 
+    public EndGame endGame;
+
 
     private void Start()
     {
@@ -61,6 +63,7 @@ public class MinigameLoader : MonoBehaviour
         uranusScene.SetActive(false);
         collectedPlanets.updatePlanets();
         sunnyScene.SetActive(true);
+        endGame.isUranusFinished = true;
     }
 
     public void sunnyToMarsTutorial()
@@ -114,6 +117,11 @@ public class MinigameLoader : MonoBehaviour
         //aggiungere codice per spostare camera in (0,0,0)
         //followScript.resetPosition();
         //followScript.enabled = false;
+
+        if (collectedPlanets.collected == 8)
+            endGame.isGameWon = true;
+        else
+            endGame.isGameLost = true;
         resetPosition();
 
     }

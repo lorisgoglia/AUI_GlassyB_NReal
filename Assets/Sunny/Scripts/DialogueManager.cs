@@ -16,6 +16,11 @@ public class DialogueManager : MonoBehaviour
     public GameObject oriani;
     public GameObject marsMap;
     public GameObject cerulli;
+    public GameObject uranusTel;
+    public GameObject uranusImg;
+    public GameObject marsTel;
+    public GameObject marsImg;
+
 
     public bool tutorialOver = false;
     public Animator animator;
@@ -42,6 +47,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        counter = -1;
         Debug.Log("[StartDialogue running]");
         //nameText.text = dialogue.name;
 
@@ -131,6 +137,18 @@ public class DialogueManager : MonoBehaviour
         {
             oriani.SetActive(true);
         }
+        else if (sentence == "First, search on the attraction I'm showing you and do image recognition of the image above. Click NEXT to know how.")
+        {
+            uranusTel.SetActive(true);
+            uranusImg.SetActive(true);
+
+
+        }
+        else if (sentence == "Now you can go in this attraction and do image recognition of the image above")
+        {
+            marsImg.SetActive(true);
+            marsTel.SetActive(true);
+        }
         else
         {
             oriani.SetActive(false);
@@ -138,6 +156,12 @@ public class DialogueManager : MonoBehaviour
             cerulli.SetActive(false);
             marsMap.SetActive(false);
             lettera.SetActive(false);
+
+            uranusTel.SetActive(false);
+            uranusImg.SetActive(false);
+
+            marsImg.SetActive(false);
+            marsTel.SetActive(false);
 
         }
 
@@ -190,6 +214,18 @@ public class DialogueManager : MonoBehaviour
         {
             oriani.SetActive(true);
         }
+        else if (sentence == "First, search on the attraction I'm showing you and do image recognition of the image above. Click NEXT to know how.")
+        {
+            uranusTel.SetActive(true);
+            uranusImg.SetActive(true);
+
+
+        }
+        else if (sentence == "Now you can go in this attraction and do image recognition of the image above")
+        {
+            marsImg.SetActive(true);
+            marsTel.SetActive(true);
+        }
         else
         {
             oriani.SetActive(false);
@@ -197,7 +233,17 @@ public class DialogueManager : MonoBehaviour
             cerulli.SetActive(false);
             marsMap.SetActive(false);
             lettera.SetActive(false);
+
+            uranusTel.SetActive(false);
+            uranusImg.SetActive(false);
+
+            marsImg.SetActive(false);
+            marsTel.SetActive(false);
+
         }
+
+        if (sentence == "Finally , when you feel ready , click the “PLAY” button to start the game. GOOD LUCK !!!")
+            tutorialOver = true;
 
 
 

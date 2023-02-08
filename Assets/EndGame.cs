@@ -4,21 +4,31 @@ using UnityEngine;
 
 public class EndGame : MonoBehaviour
 {
-    DialogueTrigger dialogueTrigger;
+    public DialogueTrigger dialogueTriggerWin;
     [SerializeField] private GameObject scene;
-    bool isGameEnded = false;
+    public DialogueTrigger dialogueTriggerLost;
+    public DialogueTrigger dialogueTriggerGoing;
+
+    public bool isGameWon = false;
+    public bool isGameLost = false;
+    public bool isUranusFinished = false;
 
     private void Start()
     {
-        dialogueTrigger = scene.GetComponent<DialogueTrigger>();
 
     }
     private void Update()
     {
-        if (scene.activeInHierarchy && isGameEnded)
+        if (scene.activeInHierarchy && isGameWon)
         {
-            dialogueTrigger.TriggerDialogue();
-            this.enabled = false;
+            dialogueTriggerWin.TriggerDialogue();
+        }else if(scene.activeInHierarchy && isUranusFinished)
+        {
+            dialogueTriggerGoing.TriggerDialogue();
+        }
+        else if (scene.activeInHierarchy && isGameLost)
+        {
+            dialogueTriggerLost.TriggerDialogue();
         }
 
     }

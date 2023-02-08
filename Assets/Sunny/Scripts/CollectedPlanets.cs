@@ -25,7 +25,7 @@ public class CollectedPlanets : MonoBehaviour
     private void Update()
     {
         Debug.Log(collected);
-        UpdateVisiblePlanets();
+        //UpdateVisiblePlanets(collected);
     }
     public void updatePlanets()
     {
@@ -35,10 +35,11 @@ public class CollectedPlanets : MonoBehaviour
         collected += num;
         collected += val;
         collected += val1;
+        UpdateVisiblePlanets(collected);
         
     }
 
-    public void UpdateVisiblePlanets()
+    public void UpdateVisiblePlanets(int val)
     {
        
         Debug.Log("Updating planets");
@@ -48,7 +49,7 @@ public class CollectedPlanets : MonoBehaviour
 
             planets[i].SetActive(true);
         }
-        for (int j = collected; j < 9; j++)
+        for (int j = collected; j < 8; j++)
         {
             Debug.Log("Remaining"+j+"planets");
             planets[j].SetActive(false);
