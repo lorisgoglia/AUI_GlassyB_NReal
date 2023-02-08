@@ -21,6 +21,11 @@ public class DialogueManager : MonoBehaviour
     public GameObject marsTel;
     public GameObject marsImg;
 
+    public GameObject nextButton;
+    public GameObject skipButton;
+    public GameObject previousButton;
+
+
 
     public bool tutorialOver = false;
     public Animator animator;
@@ -55,7 +60,9 @@ public class DialogueManager : MonoBehaviour
 
         animator.SetBool("IsIn", true);
         //nextbtn.SetActive(true);
-
+        nextButton.SetActive(true);
+        previousButton.SetActive(true);
+        skipButton.SetActive(true);
 
 
         //FindObjectOfType<DialogueCanvas>().FadeCanvas(false);
@@ -269,6 +276,9 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("End of conversation.");
         //FindObjectOfType<DialogueCanvas>().FadeCanvas(true);
 
+        nextButton.SetActive(false);
+        previousButton.SetActive(false);
+        skipButton.SetActive(false);
 
         animator.SetBool("IsIn", false);
         //nextbtn.SetActive(false);

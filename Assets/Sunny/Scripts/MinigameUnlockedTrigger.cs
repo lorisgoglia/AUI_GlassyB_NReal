@@ -9,10 +9,7 @@ public class MinigameUnlockedTrigger : MonoBehaviour
     DialogueTrigger dialogueTrigger;
 
 
-    public GameObject contorno;
-    public Text text;
-    public Camera mainCamera;
-    public Canvas canvas;
+    public GameObject imageRecognized;
 
     private void Awake()
     {
@@ -23,46 +20,15 @@ public class MinigameUnlockedTrigger : MonoBehaviour
 
     private void Update()
     {
-        
         if (meshRenderer.enabled == true)
         {
             dialogueTrigger.TriggerDialogue();
-            StartCoroutine(TimeWaiting());
-            enabled = false;
+            imageRecognized.SetActive(true);
+
+            //enabled = false;
 
         }
-        else
-        {
-            contorno.SetActive(false);
-            text.color = new Color(0, 0, 0, 0);
-        }
+
     }
-    IEnumerator TimeWaiting()
-    {
 
-        Debug.Log("running IEnumerator");
-        int i = 0;
-        while (i <= 1)
-        {
-            Debug.Log("sono nel while");
-            if (i == 1)
-            {
-                Debug.Log("sono nel if");
-
-                contorno.SetActive(false);
-                text.color = new Color(0, 0, 0, 0);
-                break;
-            }
-            Debug.Log("sono nel while dopo if");
-
-            contorno.SetActive(true);
-            text.color = new Color(0, 0, 0, 1);
-            canvas.transform.position = new Vector3(mainCamera.transform.position.x, mainCamera.transform.position.y, mainCamera.transform.position.z + 1);
-
-            i++;
-            yield return new WaitForSeconds(5f);
-
-
-        }
-    }
 }

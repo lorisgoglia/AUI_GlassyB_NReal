@@ -44,11 +44,6 @@ public class TrackingImageVisualizer : MonoBehaviour
         else
         {
 
-            //var center = image.GetCenterPose();
-            //Vector2 sizeImage = image.Size;
-            //transform.position = center.position;
-            //transform.rotation = center.rotation;
-
             if (imageRecognized == false)
             {
                 imageRecognized = true;
